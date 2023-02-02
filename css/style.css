@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+body {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(27deg, 66%, 92%);
+}
+main .container {
+  width: min(95%, 30rem);
+}
+main .container .balance {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(10deg, 79%, 65%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+main .container .balance__title {
+  color: hsl(33deg, 100%, 98%);
+  font-size: 1rem;
+}
+main .container .balance__title span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+main .container .balance .logo {
+  width: 4rem;
+}
+main .container .spent {
+  background-color: hsl(33deg, 100%, 98%);
+  border-radius: 1rem;
+  padding: 2.2rem;
+  color: hsl(25deg, 47%, 15%);
+}
+main .container .spent__title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+main .container .spent__bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 1px solid hsl(28deg, 10%, 53%);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+main .container .spent .border-line {
+  margin: 2rem 0;
+  border: 1px solid hsl(27deg, 66%, 92%);
+}
+main .container .spent__total {
+  color: hsl(28deg, 10%, 53%);
+}
+main .container .spent__amount {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+main .container .spent__amount .number {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 3rem;
+  font-weight: 700;
+}
+main .container .spent .percent {
+  font-weight: 700;
+  text-align: end;
+}
+main .container .spent .percent span {
+  font-weight: 400;
+  color: hsl(28deg, 10%, 53%);
+}
+
+@media (max-width: 26rem) {
+  main .container .balance {
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+  }
+  main .container .spent {
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+  }
+  main .container .spent .number {
+    font-size: 2.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+@mixin set-flex($flex-direction: row, $align-items: flex-start, $justify-content: flex-start) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin set-grid($align-items: stretch, $justify-content: flex-start) {
+    display: grid;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}

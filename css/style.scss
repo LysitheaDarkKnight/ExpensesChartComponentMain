@@ -1,0 +1,106 @@
+@use 'functions' as *;
+@use 'colors' as *;
+@use 'fonts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body{
+  font-size: 18px;
+  font-family: $dmsans;
+  position: relative;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+main{
+    @include set-flex($flex-direction: column, $align-items: center, $justify-content: center);
+    height: 100vh;
+    background-color: $cream-color;
+    .container{
+        width: min(95%, 30rem);
+        .balance{
+            @include set-flex($justify-content: space-between, $align-items: center);
+            background-color: $red-color;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            &__title{
+                color: $very-pale-orange-color;
+                font-size: 1rem;
+                span{
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+            }
+            .logo{
+                width: 4rem;
+            }
+        }
+        .spent{
+            background-color: $very-pale-orange-color;
+            border-radius: 1rem;
+            padding: 2.2rem;
+            color: $dark-brown-color;
+            &__title{
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            &__bar{
+                @include set-flex($justify-content: space-between);
+                list-style: none;
+                border-bottom: 1px solid $medium-brown-color;
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .border-line{
+                margin: 2rem 0;
+                border: 1px solid $cream-color;
+            }
+
+            
+            &__total{
+                color: $medium-brown-color;
+            }
+            &__amount{
+                @include set-flex($justify-content: space-between);
+                .number{
+                    color: $dark-brown-color;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    }
+                }
+                .percent{
+                    font-weight: 700;
+                    text-align: end;
+                    span{
+                        font-weight: 400;
+                        color: $medium-brown-color;
+                    }
+                }
+        }
+    }
+}
+
+@media(max-width: 26rem){
+    main{
+        .container{
+            .balance{
+                padding: 1.2rem;
+                border-radius: 0.5rem;
+            }
+            .spent{
+                padding: 1.2rem;
+                border-radius: 0.5rem;
+                .number{
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}
